@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Saini | Profile &amp; Biodata</title>
+    <meta name="description" content="Pooja Saini's personal profile and biodata.">
+    
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/svg+xml" href="pooja-logo.svg">
+    
+    <!-- Google Fonts: Inter (Official Apple SF Pro Web Alternative) & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           APPLE DESIGN SYSTEM TOKENS & VARIABLES
+           ========================================================================== */
+        :root {
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            
+            /* Dark Theme (Default Apple Pro Dark) */
+            --bg-primary: #101116;
+            --bg-secondary: #0a0a0c;
+            --page-background: linear-gradient(145deg, #19151d 0%, #101116 48%, #161a22 100%);
+            --glow-warm: #8d5267;
+            --glow-cool: #627a9f;
+            --glow-opacity: 0.18;
+            --card-bg: rgba(28, 28, 30, 0.65);
+            --card-bg-hover: rgba(44, 44, 46, 0.75);
+            --card-border: rgba(255, 255, 255, 0.12);
+            --card-border-hover: rgba(255, 255, 255, 0.28);
+            --glass-bg: rgba(20, 20, 22, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1a6;
+            --text-tertiary: #6e6e73;
+            --accent-blue: #ffffff;
+            --accent-gradient: linear-gradient(135deg, #ffffff 0%, #8e8e93 100%);
+            --accent-glow: rgba(255, 255, 255, 0.2);
+            --badge-bg: rgba(255, 255, 255, 0.12);
+            --badge-text: #ffffff;
+            
+            --shadow-subtle: none;
+            --shadow-card: none;
+            --shadow-glass: none;
+            
+            --spotlight-color: rgba(255, 255, 255, 0.08);
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f7f5f2;
+            --bg-secondary: #ffffff;
+            --page-background: linear-gradient(145deg, #faf6f1 0%, #f6f4f8 48%, #edf2f7 100%);
+            --glow-warm: #e9c5b4;
+            --glow-cool: #b7c8e6;
+            --glow-opacity: 0.32;
+            --card-bg: rgba(255, 255, 255, 0.65);
+            --card-bg-hover: rgba(255, 255, 255, 0.9);
+            --card-border: rgba(0, 0, 0, 0.1);
+            --card-border-hover: rgba(0, 0, 0, 0.25);
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(0, 0, 0, 0.12);
+            
+            --text-primary: #000000;
+            --text-secondary: #424245;
+            --text-tertiary: #86868b;
+            --accent-blue: #000000;
+            --accent-gradient: linear-gradient(135deg, #000000 0%, #424245 100%);
+            --accent-glow: rgba(0, 0, 0, 0.15);
+            --badge-bg: rgba(0, 0, 0, 0.08);
+            --badge-text: #000000;
+            
+            --shadow-subtle: none;
+            --shadow-card: none;
+            --shadow-glass: none;
+            
+            --spotlight-color: rgba(0, 0, 0, 0.04);
+        }
+
+        /* Reset & Global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "cv05", "cv08", "cv11";
+        }
+
+        h1, h2, h3, .hero-name, .section-title, .nav-brand span, .modal-title, .bento-value, .gallery-title {
+            font-family: var(--font-heading);
+            letter-spacing: -0.03em;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 80px;
+            overflow-x: hidden;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            position: relative;
+        }
+
+        /* Ambient Dynamic Background Glow */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+            background: var(--page-background);
+        }
+
+        .glow-blob {
+            position: absolute;
+            width: clamp(300px, 65vw, 640px);
+            height: clamp(300px, 65vw, 640px);
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: var(--glow-opacity);
+            transition: opacity 0.5s ease;
+        }
+
+        .glow-blob-1 {
+            top: -180px;
+            left: -100px;
+            background: var(--glow-warm);
+            animation: floatGlow 24s infinite alternate ease-in-out;
+        }
+
+        .glow-blob-2 {
+            bottom: -140px;
+            right: -100px;
+            background: var(--glow-cool);
+            animation: floatGlow 28s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(35px, 45px) scale(1.08); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .glow-blob {
+                animation: none;
+            }
+        }
+
+        /* macOS Glass Nav Dock */
+        .apple-nav-container {
+            position: fixed;
+            top: 20px;
+            z-index: 100;
+            width: calc(100% - 40px);
+            max-width: 900px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .apple-nav {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            padding: 10px 24px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: var(--shadow-glass);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-brand-logo {
+            height: 28px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: none;
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="light"] .nav-brand-logo {
+            filter: invert(1);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        [data-theme="light"] .nav-btn {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+            box-shadow: none;
+        }
+
+        .nav-btn-primary {
+            background: #ffffff !important;
+            color: #000000 !important;
+            border: none !important;
+            box-shadow: none;
+        }
+
+        .nav-btn-primary:hover {
+            background: #e5e5ea !important;
+            color: #000000 !important;
+        }
+
+        [data-theme="light"] .nav-btn-primary {
+            background: #000000 !important;
+            color: #ffffff !important;
+            box-shadow: none;
+        }
+
+        [data-theme="light"] .nav-btn-primary:hover {
+            background: #3a3a3c !important;
+            color: #ffffff !important;
+        }
+
+        .theme-toggle-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            padding: 0;
+            justify-content: center;
+        }
+
+        /* Main Container */
+        .main-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            width: calc(100% - 40px);
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        /* Card Container (Apple Squircle) */
+        .apple-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            padding: 44px;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        /* Dynamic Spotlight Gradient Overlay */
+        .apple-card::before {
+            content: '';
+            position: absolute;
+            top: var(--mouse-y, 50%);
+            left: var(--mouse-x, 50%);
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--spotlight-color) 0%, transparent 70%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .apple-card:hover::before {
+            opacity: 1;
+        }
+
+        .apple-card:hover {
+            border-color: var(--card-border-hover);
+            transform: translateY(-4px) scale(1.005);
+            box-shadow: var(--shadow-glass);
+        }
+
+        /* Hero Header Card */
+        .hero-card {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 48px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .hero-card:hover .profile-pic {
+            transform: scale(1.05);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px var(--accent-glow);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            background: #10b981;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid var(--bg-secondary);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+        }
+
+        .hero-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hero-title-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-name {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-monogram {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: var(--badge-bg);
+            padding: 4px 12px;
+            border-radius: 12px;
+            -webkit-text-fill-color: initial;
+            border: 1px solid var(--card-border);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            font-weight: 500;
+            color: var(--text-secondary);
+            letter-spacing: -0.015em;
+            line-height: 1.5;
+            margin-top: 6px;
+        }
+
+        .hero-tags {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .pill-tag {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            border: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-tag.accent-pill {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Metrics Grid inside Hero / Highlights */
+        .metrics-banner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 14px;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 18px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .metric-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .metric-value {
+            font-size: clamp(1.5rem, 3vw, 1.85rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            line-height: 1.15;
+        }
+
+        .metric-label {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 6px;
+        }
+
+        /* Section Styling */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.25;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+        }
+
+        [data-theme="light"] .section-icon {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .bento-card {
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--card-border);
+            border-radius: 22px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="light"] .bento-card {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .bento-card:hover {
+            background: var(--card-bg-hover);
+            border-color: var(--card-border-hover);
+            transform: translateY(-3px);
+        }
+
+        .bento-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .bento-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bento-value {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.35;
+            letter-spacing: -0.015em;
+        }
+
+        .bento-value.long-text,
+        .bento-card.full-width .bento-value {
+            font-size: 1.02rem;
+            font-weight: 500;
+            line-height: 1.45;
+            letter-spacing: -0.01em;
+        }
+
+        .bento-subtext {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            font-weight: 400;
+            letter-spacing: -0.015em;
+            line-height: 1.5;
+        }
+
+        /* Interactive Tech Chips */
+        .tech-stack-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .tech-chip {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            padding: 8px 16px;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="light"] .tech-chip {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .tech-chip:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border-color: var(--text-primary);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .tech-chip:hover i {
+            color: var(--bg-primary) !important;
+        }
+
+        /* Gallery Carousel & Lightbox Section */
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .carousel-nav-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="light"] .carousel-nav-btn {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .carousel-nav-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .gallery-carousel-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .gallery-carousel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-bottom: 12px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .gallery-carousel.active-drag {
+            cursor: grabbing;
+            scroll-snap-type: none;
+            scroll-behavior: auto;
+        }
+
+        .gallery-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-card {
+            flex: 0 0 calc((100% - 20px) / 2);
+            display: flex;
+            flex-direction: column;
+            scroll-snap-align: start;
+            background: transparent;
+            border: 0.5px solid #8e8e93;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            box-shadow: none !important;
+            filter: none !important;
+        }
+
+        [data-theme="light"] .gallery-card {
+            background: transparent;
+        }
+
+        .gallery-card:hover {
+            box-shadow: none !important;
+            filter: none !important;
+        }
+
+        .gallery-img {
+            flex: none;
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+            transition: var(--transition-smooth);
+            pointer-events: none;
+            box-shadow: none !important;
+            filter: none !important;
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.02);
+            filter: none !important;
+            box-shadow: none !important;
+        }
+
+        .gallery-caption {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card-bg);
+            border-top: 1px solid var(--card-border);
+            box-shadow: none !important;
+            filter: none !important;
+        }
+
+        .gallery-title {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .gallery-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* iOS Fullscreen Story Image Viewer Modal */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000000;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+            overflow: hidden;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .lightbox-modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .ios-lightbox-header {
+            position: absolute;
+            top: max(16px, env(safe-area-inset-top));
+            left: 16px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2030;
+        }
+
+        .ios-back-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .ios-back-btn:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .ios-title-capsule {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px 28px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            text-align: center;
+        }
+
+        .ios-capsule-name {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
+
+        .ios-capsule-date {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        .ios-count-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .ios-img-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000000;
+            z-index: 2010;
+            overflow: hidden;
+        }
+
+        /* Ambient Blurred Photo Background for Aspect Ratio Fitting */
+        .ios-blurred-bg {
+            position: absolute;
+            inset: -20px;
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            object-fit: cover;
+            filter: blur(45px) brightness(0.35) saturate(1.2);
+            transform: scale(1.1);
+            z-index: 2011;
+            pointer-events: none;
+        }
+
+        .ios-fullscreen-img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            position: relative;
+            z-index: 2012;
+            box-shadow: none !important;
+            filter: none !important;
+            transition: opacity 0.3s ease;
+        }
+
+        @media (min-width: 1025px) {
+            .ios-fullscreen-img {
+                width: 100%;
+                max-width: 100vw;
+                height: 92vh;
+                max-height: 92vh;
+                object-fit: contain;
+            }
+        }
+
+        /* iOS Bottom Story Scrubber Timeline */
+        .ios-bottom-bar {
+            position: absolute;
+            bottom: max(24px, env(safe-area-inset-bottom));
+            left: 20px;
+            right: 20px;
+            z-index: 2030;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 20px;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .ios-time-text {
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            min-width: 36px;
+        }
+
+        .ios-scrub-track {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ios-scrub-progress {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+        .ios-nav-zone {
+            position: absolute;
+            top: 80px;
+            bottom: 80px;
+            width: 35vw;
+            z-index: 2025;
+            cursor: pointer;
+        }
+
+        .ios-nav-left { left: 0; }
+        .ios-nav-right { right: 0; }
+
+        .ios-side-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            z-index: 2040;
+        }
+
+        .ios-side-btn:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .ios-prev-btn { left: 20px; }
+        .ios-next-btn { right: 20px; }
+
+        /* Photo privacy deterrents; browser code cannot prevent OS screenshots. */
+        body.privacy-blur main,
+        body.privacy-blur .apple-nav-container,
+        body.privacy-blur .lightbox-modal {
+            filter: blur(60px) brightness(0) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        .privacy-shield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000000;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: var(--font-heading);
+            gap: 14px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+        .privacy-shield.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .privacy-shield-icon {
+            font-size: 2.5rem;
+            color: #ef4444;
+        }
+
+        img {
+            -webkit-user-drag: none;
+            user-drag: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            pointer-events: auto;
+        }
+
+        /* Optional visual watermark overlay */
+        .watermark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.03),
+                rgba(255, 255, 255, 0.03) 20px,
+                transparent 20px,
+                transparent 40px
+            );
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            z-index: 2010;
+        }
+
+        .lightbox-close:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 72vh;
+            border-radius: 16px;
+            object-fit: contain;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .lightbox-caption-text {
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .lightbox-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .lightbox-nav-btn:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .lightbox-prev { left: 24px; }
+        .lightbox-next { right: 24px; }
+
+        .accent-text {
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Contact Action Items */
+        .contact-item {
+            cursor: pointer;
+        }
+
+        .contact-value-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 4px;
+            width: 100%;
+        }
+
+        .contact-value-row .bento-value {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-secondary);
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            min-height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .contact-item:hover .copy-btn {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        /* Toast Notification (iOS Style) */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-glass);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            opacity: 0;
+            transition: transform 0.4s var(--transition-spring), opacity 0.4s ease;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .toast-icon {
+            color: #10b981;
+            font-size: 1.1rem;
+        }
+
+        /* Project Modal Sheet (Apple Style) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .apple-modal {
+            background: var(--bg-secondary);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            box-shadow: var(--shadow-glass);
+            position: relative;
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.4s var(--transition-spring);
+        }
+
+        .modal-overlay.active .apple-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-secondary);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-close:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.03em;
+        }
+
+        .modal-category {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+
+        .modal-description {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .modal-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .feature-icon {
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        footer span {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* Scroll Animation Utility */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keep photos out of normal browser print/PDF output. */
+        @media print {
+            [aria-label="Pooja Saini photo gallery"], .lightbox-modal, .privacy-shield {
+                display: none !important;
+            }
+            .ambient-glow, .apple-nav-container, .toast, .modal-overlay, .theme-toggle-btn {
+                display: none !important;
+            }
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                padding: 0 !important;
+            }
+            .main-wrapper {
+                margin-top: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .apple-card {
+                background: #ffffff !important;
+                border: 1px solid #e5e5e5 !important;
+                box-shadow: none !important;
+                padding: 24px !important;
+                break-inside: avoid;
+            }
+            .hero-name {
+                -webkit-text-fill-color: #000000 !important;
+                color: #000000 !important;
+            }
+            .hero-monogram, .pill-tag {
+                border: 1px solid #cccccc !important;
+                color: #000000 !important;
+                background: #f0f0f0 !important;
+            }
+            .bento-card {
+                background: #f9f9f9 !important;
+                border: 1px solid #e0e0e0 !important;
+            }
+        }
+
+        /* ==========================================================================
+           ULTRA-OPTIMIZED RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+           ========================================================================== */
+        
+        /* Tablet Devices (769px - 1024px) */
+        @media (max-width: 1024px) {
+            .apple-nav-container {
+                width: calc(100% - 32px);
+            }
+
+            .main-wrapper {
+                margin-top: 96px;
+                width: calc(100% - 32px);
+                gap: 24px;
+            }
+
+            .apple-card {
+                padding: 36px 30px;
+                border-radius: 28px;
+            }
+
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-name {
+                font-size: 2.4rem;
+            }
+        }
+
+        /* Mobile & Small Tablets (481px - 768px) */
+        @media (max-width: 768px) {
+            .apple-nav-container {
+                top: 12px;
+                width: calc(100% - 24px);
+            }
+
+            .apple-nav {
+                padding: 8px 16px;
+                border-radius: 30px;
+            }
+
+            .nav-brand {
+                gap: 8px;
+                font-size: 0.95rem;
+            }
+
+            .nav-brand-logo {
+                height: 24px;
+            }
+
+            .nav-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                border-radius: 16px;
+            }
+
+            .main-wrapper {
+                margin-top: 84px;
+                width: calc(100% - 24px);
+                gap: 20px;
+            }
+
+            .apple-card {
+                padding: 26px 18px;
+                border-radius: 24px;
+            }
+
+            .hero-card {
+                padding: 28px 18px;
+                gap: 16px;
+            }
+
+            .hero-name {
+                font-size: clamp(1.75rem, 6vw, 2.2rem);
+                letter-spacing: -0.03em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .hero-tags {
+                gap: 8px;
+            }
+
+            .pill-tag {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .bento-card {
+                padding: 18px 16px;
+                border-radius: 18px;
+            }
+
+            .gallery-card {
+                flex: 0 0 100%;
+            }
+
+            .gallery-img {
+                height: 320px;
+            }
+
+            .gallery-caption {
+                padding: 14px 16px;
+            }
+        }
+
+        /* Small Mobile Screen Devices (<= 480px) */
+        @media (max-width: 480px) {
+            .apple-nav-container {
+                top: 10px;
+                width: calc(100% - 16px);
+            }
+
+            .apple-nav {
+                padding: 6px 12px;
+            }
+
+            .nav-brand span {
+                font-size: 0.85rem;
+            }
+
+            .main-wrapper {
+                margin-top: 76px;
+                width: calc(100% - 16px);
+                gap: 16px;
+            }
+
+            .apple-card {
+                padding: 20px 14px;
+                border-radius: 20px;
+            }
+
+            .section-header {
+                margin-bottom: 20px;
+            }
+
+            .section-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 0.95rem;
+                border-radius: 8px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .bento-card {
+                padding: 14px 12px;
+                border-radius: 16px;
+            }
+
+            .bento-label {
+                font-size: 0.7rem;
+                margin-bottom: 8px;
+            }
+
+            .bento-value {
+                font-size: 0.95rem;
+            }
+
+            .contact-value-row .bento-value,
+            .bento-card.full-width .bento-value,
+            .bento-value.long-text {
+                font-size: 0.92rem;
+                font-weight: 600;
+                line-height: 1.45;
+            }
+
+            .copy-btn {
+                width: 28px;
+                height: 28px;
+                min-width: 28px;
+                min-height: 28px;
+                font-size: 0.75rem;
+            }
+
+            .tech-chip {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                border-radius: 10px;
+            }
+
+            .gallery-img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Dynamic Background Glow -->
+    <div class="ambient-glow" aria-hidden="true">
+        <div class="glow-blob glow-blob-1"></div>
+        <div class="glow-blob glow-blob-2"></div>
+    </div>
+
+    <!-- macOS Top Floating Glass Dock -->
+    <div class="apple-nav-container">
+        <header class="apple-nav">
+            <a href="#" class="nav-brand">
+                <img src="pooja-logo.svg" alt="Pooja Saini initials" class="nav-brand-logo">
+                <span>Pooja Saini</span>
+            </a>
+            
+            <div class="nav-actions">
+                <button class="nav-btn theme-toggle-btn" id="themeToggle" title="Toggle Light/Dark Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contact-section" class="nav-btn nav-btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-wrapper">
+
+        <!-- Hero Header Card -->
+        <section class="apple-card hero-card reveal-on-scroll">
+            <div class="hero-info">
+                <div class="hero-title-group">
+                    <h1 class="hero-name">
+                        Pooja Saini
+                    </h1>
+                    <p class="hero-subtitle">Personal Profile &amp; Biodata</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Personal Details Section -->
+        <section class="apple-card reveal-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+                    Personal Details
+                </h2>
+            </div>
+            
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Actual Date of Birth</span>
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                    <div class="bento-value">16 December 1999</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Date of Birth in Documents</span>
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <div class="bento-value">16 December 1997</div>
+                    <div class="bento-subtext">Date recorded in official documents.</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Height</span>
+                        <i class="fa-solid fa-ruler-vertical"></i>
+                    </div>
+                    <div class="bento-value">5′ 5″</div>
+                    <div class="bento-subtext">165 cm</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Career & Education Section -->
+        <section class="apple-card reveal-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    Career &amp; Education
+                </h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card full-width">
+                    <div class="bento-label">
+                        <span>Education</span>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="bento-value">BA/MA</div>
+                </div>
+
+                <div class="bento-card full-width">
+                    <div class="bento-label">
+                        <span>Current Position</span>
+                        <i class="fa-solid fa-id-badge"></i>
+                    </div>
+                    <div class="bento-value">MA Final</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pooja Saini Photo Gallery Section -->
+        <section class="reveal-on-scroll" aria-label="Pooja Saini photo gallery">
+            <div class="gallery-carousel-wrapper">
+                <div class="gallery-carousel" id="galleryCarousel">
+                    <div class="gallery-card" onclick="openLightbox(0)">
+                        <img src="pooja-portrait.jpeg" alt="Pooja Saini portrait" class="gallery-img" draggable="false">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Background Section -->
+        <section class="apple-card reveal-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon"><i class="fa-solid fa-house-user"></i></div>
+                    Family Background
+                </h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Father's Name</span>
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                    <div class="bento-value">Mr. Bhanwar Lal Saini</div>
+                    <div class="bento-subtext">Master Mason / Contractor</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Mother's Name</span>
+                        <i class="fa-solid fa-person-dress"></i>
+                    </div>
+                    <div class="bento-value">Mrs. Mangali Devi</div>
+                    <div class="bento-subtext">Homemaker</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Brothers &amp; Sisters</span>
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <div class="bento-value">5 Total (Including Me)</div>
+                    <div class="bento-subtext">3 Brothers, 2 Sisters</div>
+                </div>
+
+                <div class="bento-card full-width">
+                    <div class="bento-label">
+                        <span>Native Place & Origin</span>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div class="bento-value">Khandela, Sikar (Rajasthan)</div>
+                    <div class="bento-subtext">Historical town renowned for architecture and heritage.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gotra Details Section -->
+        <section class="apple-card reveal-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+                    Gotra Details
+                </h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Self Gotra</span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="bento-value">JAJIM</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Mother's Gotra</span>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="bento-value">Tanwar</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Nani's Gotra</span>
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div class="bento-value">Badgurjar</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">
+                        <span>Dadi's Gotra</span>
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div class="bento-value">Khadoliya</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Details Section -->
+        <section class="apple-card reveal-on-scroll" id="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon"><i class="fa-solid fa-address-book"></i></div>
+                    Contact Details
+                </h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="bento-label">Mobile Number</div>
+                    <div class="contact-value-row">
+                        <span class="bento-value accent-text">+91 8740927266</span>
+                        <button type="button" class="copy-btn" title="Copy Phone Number" aria-label="Copy phone number" onclick="copyText('+91 8740927266', 'Phone number copied to clipboard!')">
+                            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-label">Email Address</div>
+                    <div class="contact-value-row">
+                        <span class="bento-value accent-text">poojasaini@gmail.com</span>
+                        <button type="button" class="copy-btn" title="Copy Email" aria-label="Copy email address" onclick="copyText('poojasaini@gmail.com', 'Email address copied to clipboard!')">
+                            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bento-card full-width">
+                    <div class="bento-label">
+                        <span>Current Residence Address</span>
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+                    <div class="bento-value">Ward No. 20 Mohalla Bhrampuri, Khandela (Sikar), Rajasthan - 332709</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pooja Saini. All Rights Reserved.</p>
+    </footer>
+
+    <!-- iOS Toast Banner -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toastMsg">Copied to clipboard!</span>
+    </div>
+
+    <!-- Apple Project Sheet Modal -->
+    <div class="modal-overlay" id="projectModal" onclick="closeModalOnOuter(event)">
+        <div class="apple-modal">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-category" id="modalCategory">Product Design</div>
+            <h3 class="modal-title" id="modalTitle">Project Title</h3>
+            <p class="modal-description" id="modalDesc">Detailed description of the project.</p>
+            
+            <div class="modal-features" id="modalFeatures">
+                <!-- Features injected via JS -->
+            </div>
+
+            <button class="nav-btn" style="width: 100%; justify-content: center; background: var(--accent-blue); color: #ffffff; border: none; padding: 14px;" onclick="closeModal()">
+                Close Overview
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Theme Toggle (Dark / Light)
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElem = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElem.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElem.setAttribute('data-theme', newTheme);
+            
+            const icon = themeToggle.querySelector('i');
+            if (newTheme === 'light') {
+                icon.className = 'fa-solid fa-sun';
+            } else {
+                icon.className = 'fa-solid fa-moon';
+            }
+        });
+
+        // Dynamic Spotlight Mouse Follow Effect for Cards
+        document.querySelectorAll('.apple-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(elem => {
+            observer.observe(elem);
+        });
+
+        // Copy to Clipboard Action
+        function copyText(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(message);
+            }).catch(err => {
+                // Fallback copy
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast(message);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Project Modal System
+        const projectsData = {
+            openone: {
+                title: "OpenOne Console Ecosystem",
+                category: "Enterprise Cloud & Dashboard Design",
+                desc: "An end-to-end design system and management console tailored for enterprise cloud infrastructure, resource tracking, and high-frequency data visualization.",
+                features: [
+                    "Modular Bento grid widget architecture for customized viewports.",
+                    "High contrast dark-mode optimized data visualization charts.",
+                    "Figma UI Kit built with tokenized design variables.",
+                    "Cross-platform responsive design supporting desktop & mobile apps."
+                ]
+            },
+            chitchat: {
+                title: "ChitChat Social Platform",
+                category: "Mobile UI/UX & Real-time Messaging",
+                desc: "A sleek, next-generation social communication app focusing on seamless instant messaging, voice rooms, and dynamic story updates with fluid micro-interactions.",
+                features: [
+                    "Native gesture-driven UI navigation with zero clutter.",
+                    "Custom animated emoji & reaction physics engine concept.",
+                    "Built with React Native & Figma design components.",
+                    "End-to-end user journey mapping and interactive wireframes."
+                ]
+            }
+        };
+
+        function openModal(projectId) {
+            const data = projectsData[projectId];
+            if (!data) return;
+
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalCategory').innerText = data.category;
+            document.getElementById('modalDesc').innerText = data.desc;
+
+            const featuresContainer = document.getElementById('modalFeatures');
+            featuresContainer.innerHTML = data.features.map(f => `
+                <div class="feature-item">
+                    <i class="fa-solid fa-circle-check feature-icon"></i>
+                    <span>${f}</span>
+                </div>
+            `).join('');
+
+            document.getElementById('projectModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+        }
+
+        function closeModalOnOuter(e) {
+            if (e.target.id === 'projectModal') {
+                closeModal();
+            }
+        }
+
+        // Pooja Saini Gallery Carousel Scroll System
+        function scrollGallery(direction) {
+            const container = document.getElementById('galleryCarousel');
+            const scrollAmount = container.clientWidth * direction;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // Pooja Saini Gallery Drag & Swipe Engine
+        const carousel = document.getElementById('galleryCarousel');
+        let isDown = false;
+        let startX;
+        let scrollLeftPos;
+        let justDragged = false;
+
+        if (carousel) {
+            carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                justDragged = false;
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeftPos = carousel.scrollLeft;
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+                carousel.classList.remove('active-drag');
+            });
+
+            carousel.addEventListener('mouseup', () => {
+                isDown = false;
+                carousel.classList.remove('active-drag');
+                setTimeout(() => { justDragged = false; }, 200);
+            });
+
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                if (Math.abs(walk) > 15) {
+                    justDragged = true;
+                    carousel.classList.add('active-drag');
+                    carousel.scrollLeft = scrollLeftPos - walk;
+                }
+            });
+        }
+
+        function handleCardClick(index) {
+            if (!justDragged) {
+                openLightbox(index);
+            }
+        }
+
+        // Pooja Saini Gallery Lightbox 5s Auto-Close System
+        const galleryItems = [
+            { src: 'pooja-portrait.jpeg', title: 'Portrait', desc: 'Pooja Saini' }
+        ];
+
+        let currentLightboxIndex = 0;
+        let lightboxTimer = null;
+
+        function startLightboxAutoClose() {
+            clearTimeout(lightboxTimer);
+            const progressBar = document.getElementById('lightboxProgressBar');
+            if (progressBar) {
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '100%';
+                void progressBar.offsetWidth;
+                progressBar.style.transition = 'width 5s linear';
+                progressBar.style.width = '0%';
+            }
+            lightboxTimer = setTimeout(() => {
+                closeLightbox();
+            }, 5000);
+        }
+
+        function stopLightboxAutoClose() {
+            clearTimeout(lightboxTimer);
+            const progressBar = document.getElementById('lightboxProgressBar');
+            if (progressBar) {
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '100%';
+            }
+        }
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightboxContent();
+            document.getElementById('imageLightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            startLightboxAutoClose();
+        }
+
+        function closeLightbox() {
+            stopLightboxAutoClose();
+            document.getElementById('imageLightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeLightboxOnOuter(e) {
+            if (e.target.id === 'imageLightbox') {
+                closeLightbox();
+            }
+        }
+
+        function navigateLightbox(direction) {
+            currentLightboxIndex = (currentLightboxIndex + direction + galleryItems.length) % galleryItems.length;
+            updateLightboxContent();
+            startLightboxAutoClose();
+        }
+
+        function updateLightboxContent() {
+            const item = galleryItems[currentLightboxIndex];
+            const img = document.getElementById('lightboxImg');
+            const blurBg = document.getElementById('lightboxBlurBg');
+            const targetSrc = item.url || item.src;
+            
+            if (img) {
+                img.src = targetSrc;
+                img.alt = `${item.desc}: ${item.title}`;
+                img.onerror = function() { this.src = item.src; };
+            }
+            if (blurBg) {
+                blurBg.src = targetSrc;
+                blurBg.onerror = function() { this.src = item.src; };
+            }
+            
+            const subTitle = document.getElementById('iosCapsuleSub');
+            if (subTitle) subTitle.innerText = item.title;
+            const countBadge = document.getElementById('iosCountBadge');
+            if (countBadge) countBadge.innerText = `${currentLightboxIndex + 1} / ${galleryItems.length}`;
+        }
+
+        function handleLightboxClick(e) {
+            if (e.target.closest('.ios-lightbox-header') || e.target.closest('.ios-bottom-bar') || e.target.closest('.ios-side-btn')) return;
+            const clickX = e.clientX;
+            const screenWidth = window.innerWidth;
+            if (clickX < screenWidth / 2) {
+                navigateLightbox(-1);
+            } else {
+                navigateLightbox(1);
+            }
+        }
+
+        // Fullscreen Lightbox Touch Swipe Listener (Left/Right Swipe)
+        let lbTouchStartX = 0;
+        let lbTouchStartY = 0;
+        document.addEventListener('DOMContentLoaded', () => {
+            const lbModal = document.getElementById('imageLightbox');
+            if (lbModal) {
+                lbModal.addEventListener('touchstart', (e) => {
+                    lbTouchStartX = e.touches[0].clientX;
+                    lbTouchStartY = e.touches[0].clientY;
+                }, { passive: true });
+
+                lbModal.addEventListener('touchend', (e) => {
+                    const diffX = e.changedTouches[0].clientX - lbTouchStartX;
+                    const diffY = e.changedTouches[0].clientY - lbTouchStartY;
+                    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
+                        if (diffX > 0) {
+                            navigateLightbox(-1); // Swipe Right -> Previous Image
+                        } else {
+                            navigateLightbox(1);  // Swipe Left -> Next Image
+                        }
+                    }
+                }, { passive: true });
+            }
+        });
+
+        // Discourage casual saving; direct image requests and OS capture remain possible.
+        function isProtectedPhoto(target) {
+            return target instanceof Element && Boolean(target.closest('.gallery-card, .ios-img-wrapper'));
+        }
+
+        document.addEventListener('contextmenu', (e) => {
+            if (isProtectedPhoto(e.target)) e.preventDefault();
+        }, true);
+
+        document.addEventListener('dragstart', (e) => {
+            if (isProtectedPhoto(e.target)) e.preventDefault();
+        });
+
+        // Hide the photo on a sustained touch; allow scrolling and normal taps.
+        let touchTimer = null;
+        document.addEventListener('touchstart', (e) => {
+            clearTimeout(touchTimer);
+            if (isProtectedPhoto(e.target)) {
+                touchTimer = setTimeout(() => {
+                    triggerPrivacyBlank();
+                }, 650);
+            }
+        }, { passive: true });
+
+        document.addEventListener('touchend', () => {
+            clearTimeout(touchTimer);
+        });
+
+        document.addEventListener('touchmove', () => {
+            clearTimeout(touchTimer);
+        }, { passive: true });
+
+        document.addEventListener('touchcancel', () => {
+            clearTimeout(touchTimer);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('imageLightbox');
+            if (lightbox && lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') navigateLightbox(-1);
+                if (e.key === 'ArrowRight') navigateLightbox(1);
+            }
+
+            // Best effort only: the OS/browser may never deliver capture shortcuts here.
+            if (
+                e.key === 'PrintScreen' ||
+                ((e.ctrlKey || e.metaKey) && ['p', 's'].includes(e.key.toLowerCase())) ||
+                (e.metaKey && e.shiftKey && (e.key === '3' || e.key === '4' || e.key === '5' || e.key.toLowerCase() === 's'))
+            ) {
+                e.preventDefault();
+                triggerPrivacyBlank();
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'PrintScreen') triggerPrivacyBlank();
+        });
+
+        let privacyShieldTimer = null;
+        function triggerPrivacyBlank() {
+            const shield = document.getElementById('privacyShield');
+            if (shield) {
+                clearTimeout(privacyShieldTimer);
+                shield.classList.add('active');
+                privacyShieldTimer = setTimeout(() => {
+                    shield.classList.remove('active');
+                }, 2500);
+            }
+        }
+
+        // Hide content when focus or visibility is lost; this does not detect recording.
+        function syncPhotoPrivacy() {
+            document.body.classList.toggle('privacy-blur', document.hidden || !document.hasFocus());
+        }
+
+        window.addEventListener('blur', () => {
+            clearTimeout(touchTimer);
+            document.body.classList.add('privacy-blur');
+        });
+
+        window.addEventListener('focus', () => {
+            syncPhotoPrivacy();
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            clearTimeout(touchTimer);
+            syncPhotoPrivacy();
+        });
+
+        // Briefly hide an open photo while the viewport changes.
+        window.addEventListener('resize', () => {
+            const lightbox = document.getElementById('imageLightbox');
+            if (lightbox && lightbox.classList.contains('active')) {
+                triggerPrivacyBlank();
+            }
+        });
+    </script>
+
+    <!-- Privacy Shield Protection Overlay -->
+    <div class="privacy-shield" id="privacyShield">
+        <i class="fa-solid fa-user-shield privacy-shield-icon"></i>
+        <span>Photo hidden for privacy</span>
+    </div>
+
+    <!-- iOS Fullscreen Story Image Viewer Modal -->
+    <div class="lightbox-modal" id="imageLightbox" oncontextmenu="return false;">
+        <!-- Center Fullscreen Image with Ambient Blurred Background -->
+        <div class="ios-img-wrapper" id="iosImgWrapper" onclick="handleLightboxClick(event)">
+            <img src="" alt="" id="lightboxBlurBg" class="ios-blurred-bg" draggable="false" oncontextmenu="return false;">
+            <img src="" alt="" id="lightboxImg" class="ios-fullscreen-img" draggable="false" oncontextmenu="return false;">
+        </div>
+
+        <!-- Top Glass Navigation Capsule -->
+        <div class="ios-lightbox-header">
+            <button class="ios-back-btn" onclick="closeLightbox()" title="Close Viewer">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="ios-title-capsule">
+                <span class="ios-capsule-name">Pooja Saini</span>
+                <span class="ios-capsule-date" id="iosCapsuleSub">Portrait</span>
+            </div>
+            <div class="ios-count-badge" id="iosCountBadge">1 / 1</div>
+        </div>
+
+        <!-- Bottom iOS Story Scrubber Timeline -->
+        <div class="ios-bottom-bar">
+            <span class="ios-time-text">0:00</span>
+            <div class="ios-scrub-track">
+                <div class="ios-scrub-progress" id="lightboxProgressBar"></div>
+            </div>
+            <span class="ios-time-text">0:05</span>
+        </div>
+    </div>
+</body>
+</html>
